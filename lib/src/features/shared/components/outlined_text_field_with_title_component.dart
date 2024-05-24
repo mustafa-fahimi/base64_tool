@@ -7,10 +7,10 @@ typedef Validator = String? Function(String? value);
 
 class OutlinedTextFieldWithTitleComponent extends StatelessWidget {
   const OutlinedTextFieldWithTitleComponent({
-    required this.title,
     required this.controller,
     required this.focusNode,
     required this.hintText,
+    this.title,
     this.maxLength,
     this.obscureText = false,
     this.keyboardType = TextInputType.text,
@@ -20,7 +20,7 @@ class OutlinedTextFieldWithTitleComponent extends StatelessWidget {
     this.validator,
     this.counterText = '',
     this.readOnly = false,
-    this.viewTitle = true,
+    this.hasTitle = true,
     this.minLines = 1,
     this.maxLines = 1,
     this.inputFormatters,
@@ -31,7 +31,7 @@ class OutlinedTextFieldWithTitleComponent extends StatelessWidget {
     super.key,
   });
 
-  final String title;
+  final String? title;
   final TextEditingController controller;
   final FocusNode focusNode;
   final String hintText;
@@ -44,7 +44,7 @@ class OutlinedTextFieldWithTitleComponent extends StatelessWidget {
   final Widget? suffixIcon;
   final String counterText;
   final bool readOnly;
-  final bool viewTitle;
+  final bool hasTitle;
   final Color? fillColor;
   final TextAlign? textAlign;
   final TextInputType keyboardType;
@@ -69,15 +69,15 @@ class OutlinedTextFieldWithTitleComponent extends StatelessWidget {
 
     const contentPadding = EdgeInsets.symmetric(
       vertical: 12,
-      horizontal: 16,
+      horizontal: 12,
     );
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (viewTitle) ...[
+        if (hasTitle) ...[
           Text(
-            title,
+            title ?? '',
             style: kSmallTextStyle,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
