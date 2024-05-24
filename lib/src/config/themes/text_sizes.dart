@@ -1,4 +1,4 @@
-part of 'package:commax/src/config/themes/app_themes.dart';
+part of 'package:base64_tool/src/config/themes/app_themes.dart';
 
 const kTextSize1 = 9.0;
 const kTextSize2 = 11.0;

@@ -1,4 +1,4 @@
-import 'package:commax/src/config/config.dart';
+import 'package:base64_tool/src/config/config.dart';
 import 'package:flutter/material.dart';
 
 class MenuSwitchItemComponent extends StatelessWidget {

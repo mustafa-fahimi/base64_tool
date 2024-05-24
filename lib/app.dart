@@ -1,6 +1,6 @@
 import 'package:base64_tool/src/config/config.dart';
-import 'package:base64_tool/src/config/l10n/arb/app_localizations.dart';
-import 'package:base64_tool/src/injection/injection.dart';
+import 'package:base64_tool/src/config/localization/arb/app_localizations.dart';
+import 'package:base64_tool/src/injection/riverpod_injection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -12,11 +12,17 @@ class App extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final appRouter = ref.read(appRouterProvider);
 
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      restorationScopeId: 'Test',
+      restorationScopeId: 'scopeId',
       theme: AppThemes.light,
+      routerConfig: appRouter.config(
+        navigatorObservers: () => [
+          TalkerRouteObserver(ref.read(talkerProvider)),
+        ],
+      ),
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -28,7 +34,7 @@ class App extends ConsumerWidget {
       builder: (context, child) {
         return ResponsiveBreakpoints.builder(
           child: Builder(
-            builder: (ctx) {
+            builder: (_) {
               return child!;
             },
           ),

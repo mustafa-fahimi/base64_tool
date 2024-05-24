@@ -1,4 +1,4 @@
-import 'package:commax/src/config/l10n/arb/app_localizations.dart';
+import 'package:base64_tool/src/config/localization/arb/app_localizations.dart';
 import 'package:flutter/widgets.dart';
 
 extension AppLocalizationsX on BuildContext {

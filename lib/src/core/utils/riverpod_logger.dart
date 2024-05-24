@@ -1,4 +1,4 @@
-import 'package:commax/src/injection/main_modules_providers.dart';
+import 'package:base64_tool/src/injection/riverpod_injection.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class RiverpodLogger extends ProviderObserver {

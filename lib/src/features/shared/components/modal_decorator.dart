@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:commax/src/config/config.dart';
-import 'package:commax/src/core/core.dart';
-import 'package:commax/src/features/shared/components/elevated_button_component.dart';
-import 'package:commax/src/features/shared/components/outlined_button_component.dart';
+import 'package:base64_tool/src/config/config.dart';
+import 'package:base64_tool/src/core/core.dart';
+import 'package:base64_tool/src/features/shared/components/elevated_button_component.dart';
+import 'package:base64_tool/src/features/shared/components/outlined_button_component.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -156,7 +156,7 @@ class _SecondaryButtonWidget extends StatelessWidget {
         ? context.deviceWidthFactor(0.3)
         : 100.0;
     return OutlinedButtonComponent(
-      text: secondaryButtonText ?? context.l10n.refuse,
+      text: secondaryButtonText ?? '',
       width: width,
       height: 40,
       hasBorder: false,
@@ -184,7 +184,7 @@ class _PrimaryButtonWidget extends StatelessWidget {
         : 100.0;
 
     return ElevatedButtonComponent(
-      text: primaryButtonText ?? context.l10n.confirm,
+      text: primaryButtonText ?? '',
       width: width,
       isLoading: isLoadingPrimaryButton,
       onTap: () {

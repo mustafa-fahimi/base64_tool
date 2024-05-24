@@ -1,4 +1,4 @@
-import 'package:commax/src/core/core.dart';
+import 'package:base64_tool/src/core/core.dart';
 import 'package:flutter/material.dart';
 
 part 'colors.dart';

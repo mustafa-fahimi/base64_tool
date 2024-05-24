@@ -8,6 +8,7 @@ linter:
     dangling_library_doc_comments: false
     flutter_style_todos: false
     use_setters_to_change_properties: false
+    sort_pub_dependencies: false
 
 analyzer:
   plugins:
@@ -18,9 +19,6 @@ analyzer:
     - lib/**.config.dart
     - lib/**.freezed.dart
     - lib/src/gen/**.dart
-    - lib/src/config/l10n/arb/**.dart
+    - lib/src/config/localization/arb/**.dart
   errors:
-    todo: ignore
-    fixme: ignore
     must_be_immutable: ignore
-    invalid_annotation_target: ignore

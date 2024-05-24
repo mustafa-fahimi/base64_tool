@@ -1,4 +1,4 @@
-part of 'package:commax/src/config/themes/app_themes.dart';
+part of 'package:base64_tool/src/config/themes/app_themes.dart';
 
 const kPrimaryColor = Color(0xff7446B2);
 const kSecondaryColor = Color(0xff959595);

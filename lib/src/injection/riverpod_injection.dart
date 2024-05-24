@@ -1,10 +1,10 @@
-import 'package:commax/src/config/config.dart';
-import 'package:commax/src/core/core.dart';
+import 'package:base64_tool/src/config/config.dart';
+import 'package:base64_tool/src/core/core.dart';
 import 'package:database_service/database_service.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
-part 'main_modules_providers.g.dart';
+part 'riverpod_injection.g.dart';
 
 @Riverpod(keepAlive: true)
 Talker talker(TalkerRef ref) {

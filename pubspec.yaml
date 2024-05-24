@@ -7,10 +7,10 @@ environment:
   sdk: '>=3.4.0 <4.0.0'
 
 dependencies:
+  auto_route: 8.1.3
+  cupertino_icons: 1.0.8
   flutter:
     sdk: flutter
-  cupertino_icons: 1.0.8
-  auto_route: 8.1.3
   fpdart: 1.1.0
   database_service:
     git:
@@ -26,6 +26,7 @@ dependencies:
   riverpod_annotation: 2.3.5
   talker_flutter: 4.2.2
   toastification: 2.0.0
+  freezed_annotation: ^2.4.1
 
 dev_dependencies:
   auto_route_generator: 8.0.0
@@ -47,28 +48,28 @@ flutter_gen:
 
 flutter_launcher_icons:
   android: 'ic_launcher'
-  ios: true
+  ios: false
   image_path: 'assets/images/png/ic_launcher.png'
 
 flutter:
   uses-material-design: true
 
   assets:
-    - assets
-    - assets/images
-    - assets/images/png
-    - assets/images/svg
+    - assets/
+    - assets/images/
+    - assets/images/png/
+    - assets/images/svg/
 
   fonts:
-    - family: IRANSans
+    - family: Nunito
       fonts:
-        - asset: assets/fonts/IRANSansBold.ttf
+        - asset: assets/fonts/Nunito-Black.ttf
+          weight: 800
+        - asset: assets/fonts/Nunito-Bold.ttf
           weight: 700
-        - asset: assets/fonts/IRANSansMedium.ttf
+        - asset: assets/fonts/Nunito-Medium.ttf
           weight: 500
-        - asset: assets/fonts/IRANSans.ttf
+        - asset: assets/fonts/Nunito-Regular.ttf
           weight: 400
-        - asset: assets/fonts/IRANSansLight.ttf
+        - asset: assets/fonts/Nunito-Light.ttf
           weight: 300
-        - asset: assets/fonts/IRANSansUltraLight.ttf
-          weight: 200
