@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:base64_tool/app.dart';
 import 'package:base64_tool/src/config/config.dart';
@@ -9,6 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:window_manager/window_manager.dart';
 
 Future<void> main() async {
   FlutterError.onError = (details) {
@@ -29,6 +31,9 @@ Future<void> main() async {
 
 Future<void> _startupSetup(ProviderContainer providerContainer) async {
   WidgetsFlutterBinding.ensureInitialized();
+  if (Platform.isWindows) {
+    await windowManager.ensureInitialized();
+  }
   _errorWidgetBuilder();
   await _setAppOrientations();
   providerContainer.read(appHelperProvider).setSystemUIOverlayStyle();
