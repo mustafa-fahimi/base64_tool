@@ -34,22 +34,6 @@ final appHelperProvider = Provider<AppHelper>.internal(
 );
 
 typedef AppHelperRef = ProviderRef<AppHelper>;
-String _$secureStorageServiceHash() =>
-    r'daa1185821ded46a2daf8deab4de92865d0f6c49';
-
-/// See also [secureStorageService].
-@ProviderFor(secureStorageService)
-final secureStorageServiceProvider = Provider<SecureStorageService>.internal(
-  secureStorageService,
-  name: r'secureStorageServiceProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$secureStorageServiceHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef SecureStorageServiceRef = ProviderRef<SecureStorageService>;
 String _$appRouterHash() => r'c829c35b10b7e67e5d76fccb87d466c02c13fc99';
 
 /// See also [appRouter].
@@ -64,11 +48,11 @@ final appRouterProvider = Provider<Raw<AppRouter>>.internal(
 );
 
 typedef AppRouterRef = ProviderRef<Raw<AppRouter>>;
-String _$formValidatorsHash() => r'01e7ca45d19721970c81eaf37b65c9d661732285';
+String _$formValidatorsHash() => r'1c41e0503ea81319f865fded6429a78de53d3d63';
 
 /// See also [formValidators].
 @ProviderFor(formValidators)
-final formValidatorsProvider = AutoDisposeProvider<FormValidators>.internal(
+final formValidatorsProvider = Provider<FormValidators>.internal(
   formValidators,
   name: r'formValidatorsProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -78,6 +62,21 @@ final formValidatorsProvider = AutoDisposeProvider<FormValidators>.internal(
   allTransitiveDependencies: null,
 );
 
-typedef FormValidatorsRef = AutoDisposeProviderRef<FormValidators>;
+typedef FormValidatorsRef = ProviderRef<FormValidators>;
+String _$objectBoxHelperHash() => r'e40c7e968261bed91a76d702a77379c8891a29ce';
+
+/// See also [objectBoxHelper].
+@ProviderFor(objectBoxHelper)
+final objectBoxHelperProvider = FutureProvider<ObjectBoxHelper>.internal(
+  objectBoxHelper,
+  name: r'objectBoxHelperProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$objectBoxHelperHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef ObjectBoxHelperRef = FutureProviderRef<ObjectBoxHelper>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

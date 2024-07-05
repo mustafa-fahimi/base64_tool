@@ -23,7 +23,7 @@ final encodingSwitchStateProvider =
 );
 
 typedef _$EncodingSwitchState = Notifier<bool>;
-String _$convertedInputHash() => r'12d038d954a6f5dfc545f182768922c789502aed';
+String _$convertedInputHash() => r'f373cdf66ecac022f3893fe38cc5aee8d0bf5d7e';
 
 /// See also [ConvertedInput].
 @ProviderFor(ConvertedInput)

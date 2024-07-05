@@ -1,6 +1,6 @@
 import 'package:base64_tool/src/config/config.dart';
 import 'package:base64_tool/src/core/core.dart';
-import 'package:database_service/database_service.dart';
+import 'package:base64_tool/src/core/utils/objectbox_helper.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
@@ -17,16 +17,16 @@ AppHelper appHelper(AppHelperRef ref) {
 }
 
 @Riverpod(keepAlive: true)
-SecureStorageService secureStorageService(SecureStorageServiceRef ref) {
-  return SecureStorageServiceImpl();
-}
-
-@Riverpod(keepAlive: true)
 Raw<AppRouter> appRouter(AppRouterRef ref) {
   return AppRouter();
 }
 
-@riverpod
+@Riverpod(keepAlive: true)
 FormValidators formValidators(FormValidatorsRef ref) {
   return FormValidators();
+}
+
+@Riverpod(keepAlive: true)
+Future<ObjectBoxHelper> objectBoxHelper(ObjectBoxHelperRef ref) async {
+  return await ObjectBoxHelper.create();
 }

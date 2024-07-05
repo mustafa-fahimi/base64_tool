@@ -12,10 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
   fpdart: 1.1.0
-  database_service:
-    git:
-      url: https://github.com/mustafa-fahimi/database_service.git
-      ref: master
   flutter_hooks: 0.20.5
   flutter_localizations:
     sdk: flutter
@@ -31,6 +27,9 @@ dependencies:
   animated_toggle_switch: 0.8.2
   talker_riverpod_logger: 1.1.2
   objectbox: 4.0.1
+  objectbox_flutter_libs: 4.0.1
+  path: ^1.9.0
+  path_provider: ^2.1.3
 
 dev_dependencies:
   auto_route_generator: 8.0.0
@@ -41,6 +40,8 @@ dev_dependencies:
   lint: 2.3.0
   riverpod_generator: 2.4.2
   riverpod_lint: 2.3.12
+  objectbox_generator: 4.0.1
+  source_gen: 1.5.0
 
 dependency_overrides:
   meta: 1.14.0

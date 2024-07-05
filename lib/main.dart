@@ -44,7 +44,6 @@ Future<void> _startupSetup(ProviderContainer providerContainer) async {
   _errorWidgetBuilder();
   await _setAppOrientations();
   providerContainer.read(appHelperProvider).setSystemUIOverlayStyle();
-  await providerContainer.read(secureStorageServiceProvider).initialize();
 }
 
 void _errorWidgetBuilder() {
