@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:base64_tool/src/features/home/home_page.dart';
-import 'package:flutter/material.dart';
+import 'package:base64_tool/src/features/home/presentation/pages/home_page.dart';
 
 part 'app_router.gr.dart';
 

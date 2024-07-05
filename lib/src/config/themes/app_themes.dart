@@ -1,4 +1,5 @@
 import 'package:base64_tool/src/core/core.dart';
+import 'package:base64_tool/src/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 
 part 'colors.dart';
@@ -36,7 +37,7 @@ mixin AppThemes {
       scaffoldBackgroundColor: kBackgroundColor,
       highlightColor: Colors.white12,
       splashColor: Colors.white12,
-      fontFamily: kFont,
+      fontFamily: FontFamily.nunito,
       colorScheme: colorScheme,
       appBarTheme: appBarTheme,
       iconButtonTheme: iconButtonTheme,

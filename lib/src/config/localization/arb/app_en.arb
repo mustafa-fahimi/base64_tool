@@ -1,4 +1,7 @@
 {
   "@@locale": "en",
-  "app_name":"Base64 Tool"
+  "app_name":"Base64 Tool",
+  "encode": "Encode",
+  "decode": "Decode",
+  "encode_hint": "Enter text to convert..."
 }

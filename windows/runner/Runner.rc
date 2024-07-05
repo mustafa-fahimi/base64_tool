@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.mustafafahimi" "\0"
-            VALUE "FileDescription", "base64_tool" "\0"
+            VALUE "FileDescription", "Base64Tool" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "base64_tool" "\0"
+            VALUE "InternalName", "Base64Tool" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.mustafafahimi. All rights reserved." "\0"
-            VALUE "OriginalFilename", "base64_tool.exe" "\0"
-            VALUE "ProductName", "base64_tool" "\0"
+            VALUE "OriginalFilename", "Base64Tool.exe" "\0"
+            VALUE "ProductName", "Base64Tool" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -96,6 +96,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Base64 Tool'**
   String get app_name;
+
+  /// No description provided for @encode.
+  ///
+  /// In en, this message translates to:
+  /// **'Encode'**
+  String get encode;
+
+  /// No description provided for @decode.
+  ///
+  /// In en, this message translates to:
+  /// **'Decode'**
+  String get decode;
+
+  /// No description provided for @encode_hint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter text to convert...'**
+  String get encode_hint;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
