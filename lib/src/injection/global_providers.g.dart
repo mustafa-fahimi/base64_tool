@@ -63,7 +63,7 @@ final formValidatorsProvider = Provider<FormValidators>.internal(
 );
 
 typedef FormValidatorsRef = ProviderRef<FormValidators>;
-String _$objectBoxHelperHash() => r'e40c7e968261bed91a76d702a77379c8891a29ce';
+String _$objectBoxHelperHash() => r'40756bcbf0ba0933ca9a2379e5ab21fb5a829034';
 
 /// See also [objectBoxHelper].
 @ProviderFor(objectBoxHelper)

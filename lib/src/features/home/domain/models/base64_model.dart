@@ -2,7 +2,8 @@ import 'package:objectbox/objectbox.dart';
 
 @Entity()
 class Base64Model {
-  @Id() int id;
+  @Id()
+  int id;
   String rawText;
   String convertedText;
 

@@ -1,3 +1,5 @@
+import 'package:base64_tool/src/features/home/domain/models/base64_model.dart';
+import 'package:base64_tool/src/injection/feature_injection/home_feature_providers.dart';
 import 'package:base64_tool/src/injection/global_providers.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -34,5 +36,26 @@ class ConvertedInput extends _$ConvertedInput {
     } else {
       state = ref.read(appHelperProvider).decodeFromBase64(value);
     }
+  }
+}
+
+@riverpod
+class SaveConvertedText extends _$SaveConvertedText {
+  @override
+  Future<bool> build() async => Future.value(false);
+
+  Future<void> save(Base64Model base64Model) async {
+    state = const AsyncLoading();
+    final result = await ref.read(homeRepositoryProvider).saveConvertedText(
+          base64Model,
+        );
+    result.fold(
+      (l) {
+        state = AsyncError(l, StackTrace.current);
+      },
+      (r) {
+        state = const AsyncData(true);
+      },
+    );
   }
 }

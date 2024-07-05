@@ -39,5 +39,21 @@ final convertedInputProvider =
 );
 
 typedef _$ConvertedInput = AutoDisposeNotifier<String>;
+String _$saveConvertedTextHash() => r'686d7ad296e8673e24ee4ef5fedc542d0d8f6151';
+
+/// See also [SaveConvertedText].
+@ProviderFor(SaveConvertedText)
+final saveConvertedTextProvider =
+    AutoDisposeAsyncNotifierProvider<SaveConvertedText, bool>.internal(
+  SaveConvertedText.new,
+  name: r'saveConvertedTextProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$saveConvertedTextHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$SaveConvertedText = AutoDisposeAsyncNotifier<bool>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
