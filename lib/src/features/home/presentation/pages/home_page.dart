@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:base64_tool/src/config/config.dart';
+import 'package:base64_tool/src/core/core.dart';
 import 'package:base64_tool/src/features/home/presentation/logic/home_providers.dart';
 import 'package:base64_tool/src/features/shared/components/outlined_text_field_with_title_component.dart';
 import 'package:base64_tool/src/features/shared/components/page_decorator.dart';
@@ -93,6 +94,40 @@ class _HomePageState extends State<HomePage> {
                   child: _EncodingSwitchWidget(),
                 ),
               ],
+            ),
+            const SizedBox(height: 16),
+            DecoratedBox(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(kBorderRadius),
+                color: Colors.amberAccent.shade400,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 8,
+                ),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Encoded Data',
+                      style: kMediumBoldTextStyle.copyWith(
+                        color: Colors.black87,
+                      ),
+                    ),
+                    const Spacer(),
+                    IconButton(
+                      onPressed: () {},
+                      visualDensity: VisualDensity.compact,
+                      padding: EdgeInsets.zero,
+                      icon: const Icon(
+                        Icons.copy,
+                        size: 22,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
