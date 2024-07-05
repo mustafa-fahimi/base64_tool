@@ -15,4 +15,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get encode_hint => 'Enter text to convert...';
+
+  @override
+  String get text_copied => 'Text Copied!';
 }

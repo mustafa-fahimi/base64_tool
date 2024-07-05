@@ -4,7 +4,7 @@ import 'package:database_service/database_service.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
-part 'riverpod_injection.g.dart';
+part 'global_providers.g.dart';
 
 @Riverpod(keepAlive: true)
 Talker talker(TalkerRef ref) {

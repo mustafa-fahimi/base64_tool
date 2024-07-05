@@ -4,12 +4,12 @@ import 'dart:io';
 
 import 'package:base64_tool/app.dart';
 import 'package:base64_tool/src/config/config.dart';
-import 'package:base64_tool/src/core/core.dart';
-import 'package:base64_tool/src/injection/riverpod_injection.dart';
+import 'package:base64_tool/src/injection/global_providers.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:talker_riverpod_logger/talker_riverpod_logger.dart';
 import 'package:window_manager/window_manager.dart';
 
 Future<void> main() async {
@@ -18,7 +18,14 @@ Future<void> main() async {
   };
 
   final providerContainer = ProviderContainer();
-  providerContainer.observers.add(RiverpodLogger(providerContainer));
+  providerContainer.observers.add(
+    TalkerRiverpodObserver(
+      settings: const TalkerRiverpodLoggerSettings(
+        printStateFullData: false,
+        printProviderAdded: false,
+      ),
+    ),
+  );
   await _startupSetup(providerContainer);
 
   runApp(

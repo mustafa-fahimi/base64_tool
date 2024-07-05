@@ -3,5 +3,6 @@
   "app_name":"Base64 Tool",
   "encode": "Encode",
   "decode": "Decode",
-  "encode_hint": "Enter text to convert..."
+  "encode_hint": "Enter text to convert...",
+  "text_copied": "Text Copied!"
 }

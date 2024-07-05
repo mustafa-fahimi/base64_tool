@@ -1,6 +1,6 @@
 import 'package:base64_tool/src/config/config.dart';
 import 'package:base64_tool/src/config/localization/arb/app_localizations.dart';
-import 'package:base64_tool/src/injection/riverpod_injection.dart';
+import 'package:base64_tool/src/injection/global_providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

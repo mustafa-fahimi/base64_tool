@@ -114,6 +114,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Enter text to convert...'**
   String get encode_hint;
+
+  /// No description provided for @text_copied.
+  ///
+  /// In en, this message translates to:
+  /// **'Text Copied!'**
+  String get text_copied;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

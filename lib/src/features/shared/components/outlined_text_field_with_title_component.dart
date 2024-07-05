@@ -28,6 +28,7 @@ class OutlinedTextFieldWithTitleComponent extends StatelessWidget {
     this.onTap,
     this.onFieldSubmitted,
     this.textAlign,
+    this.onChanged,
     super.key,
   });
 
@@ -52,6 +53,7 @@ class OutlinedTextFieldWithTitleComponent extends StatelessWidget {
   final void Function(String?)? onSaved;
   final dynamic Function()? onTap;
   final dynamic Function(String)? onFieldSubmitted;
+  final void Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -125,6 +127,7 @@ class OutlinedTextFieldWithTitleComponent extends StatelessWidget {
           readOnly: readOnly,
           onTap: onTap,
           onFieldSubmitted: onFieldSubmitted,
+          onChanged: onChanged,
         ),
       ],
     );

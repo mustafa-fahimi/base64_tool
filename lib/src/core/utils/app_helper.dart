@@ -1,8 +1,9 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:base64_tool/src/config/config.dart';
 import 'package:base64_tool/src/core/core.dart';
-import 'package:base64_tool/src/injection/riverpod_injection.dart';
+import 'package:base64_tool/src/injection/global_providers.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -35,8 +36,8 @@ class AppHelper {
         maxLines: 5,
         overflow: TextOverflow.ellipsis,
       ),
-      alignment: Alignment.topCenter,
-      autoCloseDuration: const Duration(milliseconds: 3500),
+      alignment: Alignment.bottomCenter,
+      autoCloseDuration: const Duration(milliseconds: 2500),
       closeButtonShowType: CloseButtonShowType.always,
       showProgressBar: false,
       style: ToastificationStyle.fillColored,
@@ -82,14 +83,6 @@ class AppHelper {
     );
   }
 
-  String humanReadableDuration(Duration duration) {
-    String twoDigits(int n) => n.toString().padLeft(2, '0');
-    final twoDigitMinutes = twoDigits(duration.inMinutes.remainder(60));
-    final twoDigitSeconds = twoDigits(duration.inSeconds.remainder(60));
-    return '${twoDigits(duration.inHours)}:$twoDigitMinutes:$twoDigitSeconds'
-        .toPersianString();
-  }
-
   void setSystemUIOverlayStyle([
     Brightness brightness = Brightness.light,
   ]) {
@@ -118,5 +111,17 @@ class AppHelper {
 
   void closeSoftKeyboard(BuildContext context) {
     context.focusScope.unfocus();
+  }
+
+  String convertToBase64(String input) {
+    final bytes = utf8.encode(input);
+    final base64String = base64Encode(bytes);
+    return base64String;
+  }
+
+  String decodeFromBase64(String base64String) {
+    final bytes = base64Decode(base64String);
+    final decodedString = utf8.decode(bytes);
+    return decodedString;
   }
 }
